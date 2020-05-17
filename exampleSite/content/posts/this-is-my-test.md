@@ -1,7 +1,6 @@
 +++
 categories = []
 date = 2020-05-17T07:00:00Z
-draft = true
 series = []
 slug = "slugone"
 tags = []
