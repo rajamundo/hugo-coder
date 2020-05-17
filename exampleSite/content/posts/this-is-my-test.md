@@ -12,5 +12,3 @@ Hello World
 This is just a test to see what the real world is like.
 
 1. This is a list
-
-{{% tip %}} Lookie here, a tip! {{% /tip %}}
