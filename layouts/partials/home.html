@@ -27,5 +27,22 @@
       {{ end }}
     </ul>
     {{ end }}
+<!-- new section -->
+    {{ define "title" }}
+      {{ .Title }} · {{ .Site.Title }}
+    {{ end }}
+    {{ define "content" }}
+      <section class="container list">
+        <h1 class="title">{{ .Title }}</h1>
+
+        <ul>
+          {{- range .Paginator.Pages -}}
+            {{- .Render "li" -}}
+          {{- end -}}
+        </ul>
+
+        {{ partial "pagination.html" . }}
+      </section>
+    {{ end }}
   </div>
 </section>
