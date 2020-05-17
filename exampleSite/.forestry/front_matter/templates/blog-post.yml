@@ -20,3 +20,5 @@ fields:
 - type: list
   name: series
   label: series
+pages:
+- exampleSite/content/posts/this-is-my-test.md
