@@ -28,7 +28,7 @@
     </ul>
     {{ end }}
 <!-- new section -->
-
+  <section class="container list">
         <ul>
           {{- range .Paginator.Pages -}}
           <li>
@@ -40,5 +40,6 @@
         </ul>
 
         {{ partial "pagination.html" . }}
+</section>
   </div>
 </section>
