@@ -27,21 +27,29 @@
       {{ end }}
     </ul>
     {{ end }}
+    </div>
+    <section class="container centered list">
+          <ul>
+            {{- range first 10 (where .Site.RegularPages "Type" "posts") -}}
+            <li>
+              <span class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+              <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
+            </li>
+            {{- end -}}
+          </ul>
+          {{ partial "pagination.html" . }}
+    </section>
   </section>
 
 <!-- new section -->
-  <section class="container list">
+  <!-- <section class="container centered list">
         <ul>
-          {{- range .Paginator.Pages -}}
+          {{- range first 10 (where .Site.RegularPages "Type" "posts") -}}
           <li>
             <span class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
             <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
           </li>
-
           {{- end -}}
         </ul>
-
         {{ partial "pagination.html" . }}
-</section>
-  </div>
-</section>
+</section> -->
